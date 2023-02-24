@@ -1,0 +1,19 @@
+Dependencies:
+        * Python3 dependencies (installed via pip):
+                1. scikit-commpy
+                2. matplotlib
+
+How to run:
+        * Run the corresponding files for each of the modulation scheme
+                $ python3 <file>.py
+
+Tested on:
+        * Linux kernel version: 6.1.12-arch1-1
+        * Python version: 3.10.9
+
+Note that all the plots are stored in the "plots" directory
+
+References:
+        * https://buildmedia.readthedocs.org/media/pdf/commpy/latest/commpy.pdf
+        * https://commpy.readthedocs.io/en/latest/
+        * https://github.com/veeresht/CommPy
