@@ -1,0 +1,7 @@
+Name: Setu Gupta
+Roll Number: 2018190
+
+How to validate experiments:
+        1. Each question has its own sub-directory.
+        2. Each of these sub-directories have a README file which describes the dependencies for the code and the way to run the code.
+        3. This directory has a PDF report file which has the answers for the theoretical questions.
