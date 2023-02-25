@@ -3,16 +3,11 @@ Dependencies:
                 * numpy
                 * matplotlib
                 * sys
-                * random
-                * math
-                * joblib
-                * multiprocessing
 
 How to run:
-        * Run the main.py file with python3. The first argument to the file should be the type of modulation to be used.
-                $ python3 main.py <modulator>
-        * Run without any arguments to get the usage of the file.
-                $ python3 main.py
+        * Run the main.py file with python3. The first argument to the file should be the phase deviation factor and the
+        second argument should be the attenuation factor and the 3rd argument should be the number of independent sinusoids.
+                $ python3 main.py <phase deviation> <attenuation> <number of sinusoids>
 
 Tested on:
         * Linux kernel version: 6.1.12-arch1-1
@@ -28,6 +23,3 @@ References:
         * https://matplotlib.org/stable/api/markers_api.html
         * https://joblib.readthedocs.io/en/latest/parallel.html
         * https://stackoverflow.com/questions/9786102/how-do-i-parallelize-a-simple-python-loop
-
-Note:
-The code may throw a runtime warning. But it is safe to ignore this warning
