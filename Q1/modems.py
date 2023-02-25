@@ -9,7 +9,7 @@ class Modem:
         self.symbols = symbols
 
         binary_strings = get_binary_strings(self.num_bits)
-        
+
         self.mapping = {}
         self.reverse_mapping = {}
         for string, symbol in zip(binary_strings, self.symbols):
@@ -29,7 +29,7 @@ class Modem:
             bits_string = "".join([str(x) for x in bits])
             modulated_signal.append(self.mapping[bits_string])
 
-        return np.asarray(modulated_signal)
+        return np.asarray(modulated_signal, dtype=np.complex64)
     
     def demodulate(self, symbols):
         
@@ -52,6 +52,9 @@ class BPSK(Modem):
         num_bits = 1
         symbols = get_PSK_points(2)
         super().__init__(num_bits, symbols)
+    
+    def __str__(self):
+        return "BPSK"
 
 class QPSK(Modem):
 
@@ -59,6 +62,9 @@ class QPSK(Modem):
         num_bits = 2
         symbols = get_PSK_points(4)
         super().__init__(num_bits, symbols)
+    
+    def __str__(self):
+        return "QPSK"
 
 class QAM_4(Modem):
 
@@ -66,6 +72,9 @@ class QAM_4(Modem):
         num_bits = 2
         symbols = get_QAM_points(4)
         super().__init__(num_bits, symbols)
+    
+    def __str__(self):
+        return "4-QAM"
 
 class PSK_16(Modem):
 
@@ -73,6 +82,9 @@ class PSK_16(Modem):
         num_bits = 4
         symbols = get_PSK_points(16)
         super().__init__(num_bits, symbols)
+    
+    def __str__(self):
+        return "16-PSK"
 
 class QAM_16(Modem):
 
@@ -80,10 +92,20 @@ class QAM_16(Modem):
         num_bits = 4
         symbols = get_QAM_points(16)
         super().__init__(num_bits, symbols)
+    
+    def __str__(self):
+        return "16-QAM"
 
 class QAM_32(Modem):
 
     def __init__(self):
         num_bits = 5
-        symbols = get_QAM_points(32)
+        
+        # Remove 4 corner symbols
+        _symbols = get_QAM_points(36)
+        symbols = [s for s in _symbols if(s != -2.5-2.5j and s != -2.5+2.5j and s != 2.5-2.5j and s != 2.5+2.5j)]
+        
         super().__init__(num_bits, symbols)
+
+    def __str__(self):
+        return "32-QAM"

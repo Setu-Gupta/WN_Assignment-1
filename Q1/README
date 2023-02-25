@@ -1,11 +1,18 @@
 Dependencies:
         * Python3 dependencies (installed via pip):
-                1. scikit-commpy
-                2. matplotlib
+                * numpy
+                * matplotlib
+                * sys
+                * random
+                * math
+                * joblib
+                * multiprocessing
 
 How to run:
-        * Run the corresponding files for each of the modulation scheme
-                $ python3 <file>.py
+        * Run the main.py file with python3. The first argument to the file should be the type of modulation to be used.
+                $ python3 main.py <modulator>
+        * Run without any arguments to get the usage of the file.
+                $ python3 main.py
 
 Tested on:
         * Linux kernel version: 6.1.12-arch1-1
@@ -17,3 +24,7 @@ References:
         * https://www.geeksforgeeks.org/complex-numbers-in-python-set-1-introduction/
         * https://stackoverflow.com/questions/62983674/the-absolute-value-of-a-complex-number-with-numpy
         * https://stackoverflow.com/questions/55700338/how-to-generate-a-complex-gaussian-white-noise-signal-in-pythonor-numpy-scipy
+        * https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html
+        * https://matplotlib.org/stable/api/markers_api.html
+        * https://joblib.readthedocs.io/en/latest/parallel.html
+        * https://stackoverflow.com/questions/9786102/how-do-i-parallelize-a-simple-python-loop

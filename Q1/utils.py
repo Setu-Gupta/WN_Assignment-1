@@ -1,6 +1,10 @@
 from math import sqrt, pi, cos, sin
 import numpy as np
-from random import randint
+from random import randint, seed
+
+# Fix the seed for RNG for reproducibility
+np.random.seed(0)
+seed(10)
 
 def get_QAM_points(M):
     points = []
@@ -39,21 +43,22 @@ def get_binary_strings(num_bits):
 def get_estimated_symbols(recv_symbols, symbols_set):
     
     estimated_symbols = []
-
     for rs in recv_symbols:
         min_dist = np.Inf
         estimate = symbols_set[0]
         for s in symbols_set:
             if(np.abs(rs - s) < min_dist):
                 min_dist = np.abs(rs - s)
-                estimate = rs
+                estimate = s
 
         estimated_symbols.append(estimate)
+
+    return estimated_symbols
 
 def awgn(symbols, variance):
     std_dev = sqrt(variance)
     n = len(symbols)
-    noise = np.random.normal(loc=0, scale=std_dev, size=(n, 2)).view(np.complex128)
+    noise = np.random.normal(loc=0, scale=std_dev, size=(n)).view(np.complex64)
     noisy_signal = symbols + noise
     return noisy_signal
 
