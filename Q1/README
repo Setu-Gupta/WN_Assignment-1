@@ -14,6 +14,6 @@ Tested on:
 Note that all the plots are stored in the "plots" directory
 
 References:
-        * https://buildmedia.readthedocs.org/media/pdf/commpy/latest/commpy.pdf
-        * https://commpy.readthedocs.io/en/latest/
-        * https://github.com/veeresht/CommPy
+        * https://www.geeksforgeeks.org/complex-numbers-in-python-set-1-introduction/
+        * https://stackoverflow.com/questions/62983674/the-absolute-value-of-a-complex-number-with-numpy
+        * https://stackoverflow.com/questions/55700338/how-to-generate-a-complex-gaussian-white-noise-signal-in-pythonor-numpy-scipy
