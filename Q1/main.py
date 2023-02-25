@@ -7,7 +7,7 @@ from multiprocessing import cpu_count
 
 # Set the simulation cycles and plots directory
 plot_dir = "./plots/"
-sim_cycles = 1000000
+sim_cycles = 10000
 
 def compute_BER(modem, noise):
     # Generate a 12 kilobit long binary string
