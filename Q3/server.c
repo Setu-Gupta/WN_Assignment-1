@@ -8,18 +8,26 @@
 void print_usage()
 {
         printf("Incorrect usage. Exiting!\n");
-        printf("Usage: server <port>\n");
+        printf("Usage: server <port> <file>\n");
         exit(-1);
 }
 
 int main(int argc, char* argv[])
 {
         // Sanitize the user arguments
-        if(argc < 2)
+        if(argc < 3)
                 print_usage();
 
-        printf("Server starting at port %s...\n", argv[1]);
+        printf("Server starting at port %s and dumping latency in %s...\n", argv[1], argv[2]);
         
+        // Open the file to dump the latencies into
+        FILE *dump;
+        if((dump = fopen(argv[2], "w+")) == NULL)
+        {
+                fprintf(stderr, "Failed to open dumping file! Exiting...\n");
+                exit(-1);
+        }
+
         // Create the server socket
         int sock_fd;
         if((sock_fd = socket(AF_INET, SOCK_STREAM, 0)) < 0)
@@ -80,8 +88,10 @@ int main(int argc, char* argv[])
                 
                 // Compute the latency
                 unsigned long long latency_usec = time_usec - client_timestamp;
-                
+               
+                // Display and dump the latency
                 printf("Latency: %lld\n", latency_usec);
+                fprintf(dump, "%lld\n", latency_usec);
         }
 
         // Close the client connection
@@ -89,6 +99,9 @@ int main(int argc, char* argv[])
 
         // Shut the server down
         shutdown(sock_fd, SHUT_RDWR);
+
+        // Close the dump file
+        fclose(dump);
         
         printf("Exiting...\n");
         return 0;

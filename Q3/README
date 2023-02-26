@@ -10,10 +10,8 @@ How to run:
         * On the server side:
                 * First build the code by running make
                         $ make -j
-                * Then run the server executable with the first and only argument as the port to be used
-                        $ ./server <port>
-                * To save the latency in a file, use output redirection
-                        $ ./server <port> > <file.csv>
+                * Then run the server executable with the first argument as the port to be used and the second argument as the file to dump the data in
+                        $ ./server <port> <file>
         * On the client side:
                 * First build the code by running make
                         $ make -j
@@ -45,3 +43,5 @@ References:
         * https://man7.org/linux/man-pages/man2/read.2.html
         * https://man7.org/linux/man-pages/man2/shutdown.2.html
         * https://man7.org/linux/man-pages/man7/ip.7.html
+        * https://linuxhint.com/write-file-c/
+        * https://man7.org/linux/man-pages/man3/fopen.3.html
