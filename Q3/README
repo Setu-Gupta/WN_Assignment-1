@@ -28,3 +28,7 @@ Note: The generated CSV files are named wired.csv and wireless.csv
 
 References:
         * https://www.geeksforgeeks.org/socket-programming-cc/
+        * https://gcc.gnu.org/onlinedocs/gcc/Optimize-Options.html
+        * https://stackoverflow.com/questions/16275444/how-to-print-time-difference-in-accuracy-of-milliseconds-and-nanoseconds-from-c
+        * https://stackoverflow.com/questions/5833094/get-a-timestamp-in-c-in-microseconds
+        * https://man7.org/linux/man-pages/man2/settimeofday.2.html

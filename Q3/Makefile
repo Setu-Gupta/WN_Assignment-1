@@ -1,5 +1,5 @@
 CC = gcc
-CFLAGS = -Werror -Wall -Wextra -pedantic -march=native -O3
+CFLAGS = -Werror -Wall -Wextra -pedantic -march=native -Ofast
 
 all: server client
 
