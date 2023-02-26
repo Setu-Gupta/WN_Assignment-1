@@ -1,0 +1,30 @@
+How to build:
+        * Run make in the current directory. This will build the executables for server and client both
+                $ make -j
+
+How to clean built files:
+        * Run make clean
+                $ make clean
+
+How to run:
+        * On the server side:
+                * First build the code by running make
+                        $ make -j
+                * Then run the server executable with the first and only argument as the port to be used
+                        $ ./server <port>
+                * To save the latency in a file, use output redirection
+                        $ ./server <port> > <file.csv>
+        * On the client side:
+                * First build the code by running make
+                        $ make -j
+                * Then run the client executable with the first argument as the IP address of the server and the second argument as the port
+                        $ ./client <IP> <port>
+
+Tested on:
+        * Linux kernel version: 6.1.12-arch1-1
+        * GLibc version: 2.37
+
+Note: The generated CSV files are named wired.csv and wireless.csv
+
+References:
+        * https://www.geeksforgeeks.org/socket-programming-cc/
