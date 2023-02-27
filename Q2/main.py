@@ -44,7 +44,7 @@ def main():
     plt.ylabel("SNR")
     plt.title("SNR v/s time")
     plt.plot(snr)
-    plt.gca().autoscale(enable=True, axis='x', tight=True)
+    plt.gca().autoscale(enable=True, axis='both', tight=True)
     plt.savefig(str(num) + ".png")
 
 if __name__ == "__main__":
