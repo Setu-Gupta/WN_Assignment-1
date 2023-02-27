@@ -103,8 +103,12 @@ class QAM_32(Modem):
         
         # Remove 4 corner symbols
         _symbols = get_QAM_points(36)
-        symbols = [s for s in _symbols if(s != -2.5-2.5j and s != -2.5+2.5j and s != 2.5-2.5j and s != 2.5+2.5j)]
-        
+        max_power = 0
+        for s in _symbols:
+            if(max_power < np.abs(s)):
+                max_power = np.abs(s)
+        symbols = [s for s in _symbols if(np.abs(s) != max_power)]
+
         super().__init__(num_bits, symbols)
 
     def __str__(self):
