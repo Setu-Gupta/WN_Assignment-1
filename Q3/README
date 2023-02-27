@@ -22,7 +22,16 @@ Tested on:
         * Linux kernel version: 6.1.12-arch1-1
         * GLibc version: 2.37
 
-Note: The generated CSV files are named wired.csv and wireless.csv
+Note: The generated CSV files are named wired.csv and wireless.csv. The latency is in microseconds.
+
+Testing methodology:
+        1. Wireless
+                * I created a hotspot on my phone and connected both the systems to it.
+                * There was no other device connected to the hotspot.
+                * My phone and both the systems were placed near each other withing the radius of approximately 1 meter.
+        2. Wired
+                * I directly connected both the systems with a LAN cable without any switch/router in between.
+                * The length of the ethernet cable was approximately 2 meters.
 
 References:
         * https://www.geeksforgeeks.org/socket-programming-cc/
@@ -45,3 +54,4 @@ References:
         * https://man7.org/linux/man-pages/man7/ip.7.html
         * https://linuxhint.com/write-file-c/
         * https://man7.org/linux/man-pages/man3/fopen.3.html
+        * https://askubuntu.com/questions/22835/how-to-network-two-ubuntu-computers-using-ethernet-without-a-router
