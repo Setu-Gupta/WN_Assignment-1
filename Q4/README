@@ -1,7 +1,6 @@
 Dependencies:
         * Python3 dependencies (installed via pip):
                 * numpy
-                * random
 
 How to run:
         * Run the main.py file with python3
