@@ -1,0 +1,16 @@
+Dependencies:
+        * Python3 dependencies (installed via pip):
+                * numpy
+                * random
+
+How to run:
+        * Run the main.py file with python3
+                $ python3 main.py
+
+Tested on:
+        * Linux kernel version: 6.1.12-arch1-1
+        * Python version: 3.10.9
+
+References:
+        * https://numpy.org/doc/1.13/reference/generated/numpy.random.randint.html
+        * https://numpy.org/doc/stable/reference/random/generated/numpy.random.normal.html
