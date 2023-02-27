@@ -9,7 +9,7 @@ THRESH = -5 + 10/3
 def main():
     
     # Generate a sequence of random bits
-    tx_bits = np.random.randint(0, 2, size=NUM_BITS, dtype=np.uint32) 
+    tx_bits = np.random.choice([0, 1], size=NUM_BITS, p=[1/3, 2/3]) 
    
     # Modulate the bits to get the signal
     signal = np.array([5 if i == 1 else -5 for i in tx_bits], dtype=np.float32)

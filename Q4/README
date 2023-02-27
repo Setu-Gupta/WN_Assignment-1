@@ -12,4 +12,4 @@ Tested on:
 
 References:
         * https://numpy.org/doc/1.13/reference/generated/numpy.random.randint.html
-        * https://numpy.org/doc/stable/reference/random/generated/numpy.random.normal.html
+        * https://numpy.org/doc/stable/reference/random/generated/numpy.random.choice.html
