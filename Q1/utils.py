@@ -14,8 +14,16 @@ def get_QAM_points(M):
     for x in range(coords):
         for y in range(coords):
             points.append(complex(x - shift, y - shift))
+    
+    max_power = 0
+    for p in points:
+        if(max_power < np.abs(p)):
+            max_power = np.abs(p)
 
-    return points
+    scale_factor = 1/max_power
+    scaled_points = np.array([x * scale_factor for x in points])
+
+    return scaled_points
 
 def get_PSK_points(M):
     points = []
