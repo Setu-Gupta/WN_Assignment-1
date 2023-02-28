@@ -1,0 +1,20 @@
+Dependencies:
+        * Python3 dependencies (installed via pip):
+                * numpy
+                * random
+                * math
+
+How to run:
+        * Run the main.py file with python3 to get the bit error rate. The first argument to the file should be the type of modulation to be used.
+                $ python3 main.py <modulator>
+        * Run without any arguments to get the usage of the file.
+                $ python3 main.py
+
+Tested on:
+        * Linux kernel version: 6.1.12-arch1-1
+        * Python version: 3.10.9
+
+Note that all the plots are stored in the "plots" directory
+
+Note:
+The code may throw a runtime warning. But it is safe to ignore this warning
