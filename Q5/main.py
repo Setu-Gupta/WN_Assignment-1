@@ -17,9 +17,6 @@ modulated_signals = modulate(mapping, tx_signals)
 variance = 0.1  # 0.1 is equivalent to -10dB
 noisy_signals = awgn(modulated_signals, variance)
 
-for x, y in zip(modulated_signals, noisy_signals):
-    print(x, y)
-
 # Demodulate the noisy signals
 rx_signals = demodulate(noisy_signals, symbols, rev_mapping)
 
