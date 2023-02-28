@@ -4,7 +4,7 @@ import numpy as np
 NUM_BITS = 1000000
 
 # Set the threshold
-THRESH = 5
+THRESH = 4.99755859375
 
 def main():
     

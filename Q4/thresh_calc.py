@@ -6,7 +6,7 @@ def q(x):
 
 # Define the equation. We want to find a T such that func(T) = 0
 def func(T):
-    return 2    *q((T-5)/2) - q(-(T+5)/2)
+    return 2*q((T-5)/2) - q(-(T+5)/2)
 
 # Set up the bounds for binary search
 start_val = -5
@@ -19,9 +19,7 @@ err_bound = 0.001
 # Perform binary search
 while True:
 
-    print(func(estimate), estimate, start_val, end_val)
-    
-    # Break of the value is close enough
+    # Break if the value is close enough
     if(abs(func(estimate)) < err_bound):
         break
 
